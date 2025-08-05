@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Music Recommendation System Using BigData</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+ <script LANGUAGE="Javascript" >
+function validate(){
+	var x=document.forms["f1"]["t1"].value;
+	
+	if(x == null || x==""){
+		window.alert("Enter Your Liking");
+		document.f1.username.focus();
+		return false;
+	}
+	
+	return true;
+}
+		
+	
+	</script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<center><font size="4" color="yellow">Music Recommendation System Using BigData</font></center>
+		</div>
+		<div id="slogan">
+			
+		</div>
+	</div>
+	<div id="menu">
+		<ul>
+      <li class="nlink"><a href="index">Home</a></li>
+	  <li class="nlink"><a href="Recommend">Music&nbsp;Recommendation</a></li>
+      
+   </ul>
+<br class="clearfix" />
+				</div>
+			
+	<div id="splash">
+		<img class="pic" src="{{ url_for('static', filename='images/investor.jpg') }}" width="870" height="230" alt="" />
+	</div>	
+			<center>
+<form name ="f1" method="post" action="/RecommendAction" onsubmit="return validate(this);">
+	<br/>
+   <h3><b>Content (Lyrics) Based Songs Recommendation Screen</b></h3>
+   
+	<font size="" color="blue"><center>{{msg }}</center></font>
+						
+						<table align="center" width="80" >
+			 <tr><td><font size="" color="black">Enter&nbsp;Liking&nbsp;Lyrics</font></td><td><input type="text" name="t1" style="font-family: Comic Sans MS" size="60"/></td></tr>
+         		 
+			<tr><td></td><td><input type="submit" value="Submit">
+			</td>
+			</table>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				</div>	
+					
+				</div>
+				
+				
+	</body>
+</html>
